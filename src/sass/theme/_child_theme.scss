@@ -1,7 +1,159 @@
 body {
-    font-family: sans-serif;
+    font-family: 'abc_arizona_sans';
+    font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: serif;
+    font-family: 'abc_arizona_serif';
+    font-weight: 400;
+}
+
+.container {
+    max-width: unset !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+}
+
+a {
+    color: $black !important;
+}
+
+//// HEADER
+
+#main-nav {
+    padding-left: max(2rem, calc(50vw - 600px));
+    padding-right: max(2rem, calc(50vw - 600px));
+    .container {
+        align-items: start;
+        margin: 2rem 0;
+    }
+
+    .nav-link {
+        font-weight: 700;
+        color: $black;
+        &:hover {
+            color: $darkestgray;
+        }
+    }
+
+}
+
+.home {
+    #wrapper-navbar {
+        height: 0;
+        overflow: visible;
+        z-index: 100;
+        position: relative;
+        .nav-link {
+            color: white !important;
+            &:hover {
+                color: gray !important;
+            }
+        }
+        .custom-logo-link {
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+
+    .landing-cover {
+        padding: 300px 0 0 0;
+        .row {
+            padding-left: max(2rem, calc(50vw - 600px));
+            padding-right: max(2rem, calc(50vw - 600px));
+        }
+    }
+
+    .wp-block-cb-carousel .slick-slide {
+        padding: 0;
+    }
+
+}
+
+#full-width-page-wrapper {
+    padding: 0 !important;
+}
+
+
+
+
+
+//// FOOTER 
+
+.site-footer {
+    margin: 2rem 0;
+    padding-left: max(2rem, calc(50vw - 600px));
+    padding-right: max(2rem, calc(50vw - 600px));
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            margin: 0;
+            padding: 0;
+            a {
+                text-decoration: none;
+                color: white !important;
+            }
+        }
+    }
+}
+
+
+//// PAGE CONTENT 
+
+.entry-content {
+    
+    & > .row {
+        padding-left: max(2rem, calc(50vw - 600px));
+        padding-right: max(2rem, calc(50vw - 600px));
+    }
+}
+
+
+
+//// ABOUT PAGE
+
+// PEOPLE SHORTCODE
+.display-people {
+    p {
+        margin-bottom: 0;
+    }
+}
+
+
+
+//// PRESS ARCHIVE
+
+#archive-wrapper {
+
+    .container > .row {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: max(2rem, calc(50vw - 600px));
+        padding-right: max(2rem, calc(50vw - 600px));
+    }
+
+    .post-wrapper {
+        p, h6 {
+            margin-bottom: 0;
+            line-height: 1.2rem;
+        }
+        a {
+            text-decoration: none !important;
+            color: $black !important;
+        }
+        .date {
+            font-size: .8rem;
+        }
+    }
+}
+
+.press-contact {
+    p {
+        margin: 0;
+    }
 }

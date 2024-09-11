@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<footer class="entry-footer">
 
-		<?php understrap_edit_post_link(); ?>
+
 
 	</footer><!-- .entry-footer -->
 

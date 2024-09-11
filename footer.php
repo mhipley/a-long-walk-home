@@ -29,15 +29,20 @@ $container = get_theme_mod( 'understrap_container_type' );
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-3">
-                        FOLLOW US
-                        [social links]
+                        <?php $locations = get_nav_menu_locations();
+                        $menu = wp_get_nav_menu_object( $locations['social-menu'] );
+                        echo '<div class="text-uppercase fw-bold mb-2">' . wp_kses_post( $menu->name ) . '</div>'; ?>
+                    <?php wp_nav_menu( array( 'theme_location' => 'social-menu' ) ); ?>
                     </div>
                     <div class="col-md-5">
-                        MAKE A DIFFERENCE
-                        [additional links]
+                        <?php $locations = get_nav_menu_locations();
+                        $menu = wp_get_nav_menu_object( $locations['footer-menu'] );
+                        echo '<div class="text-uppercase fw-bold mb-2">' . wp_kses_post( $menu->name ) . '</div>'; ?>
+                        <?php echo wp_get_nav_menu_object("footer-menu" ); ?>
+                    <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
                     </div>
                     <div class="col-md-4">
-                        [address]
+                        <?php dynamic_sidebar( 'footer-contact' ); ?>
                     </div>    
                 </div>
             </div>

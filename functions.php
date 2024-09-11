@@ -92,3 +92,37 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+
+register_sidebar( array(
+	'id'            => 'footer-contact',
+	'name'          => __( 'Footer Contact Info', 'understrap' ),
+	'description'   => __( 'Footer widget area for contact information.', 'understrap' ),
+	'before_widget' => '',
+	'after_widget'  => '',
+	'before_title'  => '<h3 class="widget-title">',
+	'after_title'   => '</h3>',
+  ) );
+
+  register_sidebar( array(
+	'id'            => 'press-contact',
+	'name'          => __( 'Press Contact Info', 'understrap' ),
+	'description'   => __( 'Press widget area for contact information.', 'understrap' ),
+	'before_widget' => '',
+	'after_widget'  => '',
+	'before_title'  => '<h3 class="widget-title">',
+	'after_title'   => '</h3>',
+  ) );
+  
+	  
+  function register_my_menus() {
+	register_nav_menus(
+	  array(
+		'social-menu' => __( 'Social Menu' ),
+		'footer-menu' => __( 'Footer Menu' )
+	  )
+	);
+  }
+  add_action( 'init', 'register_my_menus' );
+
+  include('custom-shortcodes.php');
