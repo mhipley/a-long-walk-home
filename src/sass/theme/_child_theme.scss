@@ -6,6 +6,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'abc_arizona_serif';
     font-weight: 400;
+    margin-bottom: 1rem;
 }
 
 .container {
@@ -72,12 +73,27 @@ a {
 
 }
 
+.wp-block-cover {
+    a {
+        text-decoration: none !important;
+        color: unset !important;
+    }
+}
+
 #full-width-page-wrapper {
     padding: 0 !important;
 }
 
 
+.quote-block {
+    color: $midgray;
+    font-family: 'abc_arizona_serif';
+    font-weight: 200;
+    background-image: url('/wp-content/themes/a-long-walk-home/img/quote.png');
+    background-position: 10% 90%;
+    background-repeat: no-repeat;
 
+}
 
 
 //// FOOTER 
@@ -156,4 +172,18 @@ a {
     p {
         margin: 0;
     }
+}
+
+.wp-pagenavi {
+    span, a {
+        border: 0 !important;
+    }
+    font-family: 'abc_arizona_serif';
+    a {
+        text-decoration: underline;
+    }
+    .nextpostslink, .previouspostslink {
+        text-decoration: none;
+    }
+
 }
