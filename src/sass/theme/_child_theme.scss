@@ -40,6 +40,13 @@ a {
 
 }
 
+.donate-button {
+    color: #fff !important;
+    &:hover {
+        color: $offwhite !important;
+    }
+}
+
 .home {
     #wrapper-navbar {
         height: 0;
@@ -59,16 +66,51 @@ a {
         }
     }
 
-    .landing-cover {
-        padding: 300px 0 0 0;
+
+
+    .wp-block-cover {
+        padding: 0;
         .row {
             padding-left: max(2rem, calc(50vw - 600px));
             padding-right: max(2rem, calc(50vw - 600px));
+            .row {
+                padding-left: unset;
+                padding-right: unset;
+            }
         }
+    }
+
+    .wp-block-cb-carousel {
+        .wp-block-cover {
+            .row {
+                padding-top: 300px;
+            }
+        }
+        
     }
 
     .wp-block-cb-carousel .slick-slide {
         padding: 0;
+    }
+
+    .slick-dotted.slick-slider {
+        margin-bottom: 0 !important;
+    }
+
+    .slick-dots {
+        position: absolute;
+        bottom: 0;
+        z-index: 100;
+        li {
+            button::before {
+                color: #fff;
+            }
+        }
+        .slick-active {
+            button::before {
+                color: $offwhite;
+            }
+        }
     }
 
 }
@@ -124,8 +166,10 @@ a {
 .entry-content {
     
     & > .row {
-        padding-left: max(2rem, calc(50vw - 600px));
-        padding-right: max(2rem, calc(50vw - 600px));
+        padding-left: max(2rem, calc(50vw - 600px)) !important;
+        padding-right: max(2rem, calc(50vw - 600px)) !important;
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
     }
 }
 
@@ -186,4 +230,17 @@ a {
         text-decoration: none;
     }
 
+}
+
+.splash-overlay {
+    padding-left: max(2rem,50vw - 600px);
+    padding-right: max(2rem,50vw - 600px);
+    padding-top: 2.5rem;
+    .logo {
+        width: 191px;
+        height: 191px;
+        background-image: url('/wp-content/themes/a-long-walk-home/img/logo.png');
+        background-repeat: no-repeat;
+        filter: brightness(0) invert(1);
+    }
 }

@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row align-items-end">
 
             <div class="col-md-8">
-                <h1>Press</h1>
+                <h1 class="mb-0">Press</h1>
             </div>
 
             <div class="col-md-4">

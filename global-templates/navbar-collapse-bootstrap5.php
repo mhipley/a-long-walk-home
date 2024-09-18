@@ -52,7 +52,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		);
 		?>
 
-        <button class="btn btn-dark rounded-0 ms-4 px-3">DONATE</button>
+        <a class="btn btn-dark rounded-0 ms-4 px-3 donate-button" href="<?php the_field('donation_link', 'option'); ?>" target="_blank">DONATE</a>
 
 	</div><!-- .container(-fluid) -->
 

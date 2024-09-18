@@ -34,14 +34,16 @@ $container = get_theme_mod( 'understrap_container_type' );
                         echo '<div class="text-uppercase fw-bold mb-2">' . wp_kses_post( $menu->name ) . '</div>'; ?>
                     <?php wp_nav_menu( array( 'theme_location' => 'social-menu' ) ); ?>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 mt-4 mt-md-0">
                         <?php $locations = get_nav_menu_locations();
                         $menu = wp_get_nav_menu_object( $locations['footer-menu'] );
                         echo '<div class="text-uppercase fw-bold mb-2">' . wp_kses_post( $menu->name ) . '</div>'; ?>
                         <?php echo wp_get_nav_menu_object("footer-menu" ); ?>
-                    <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
+                        <a class="btn btn-outline-light footer-donate rounded-0 mb-2 px-4 text-white" href="<?php the_field('donation_link', 'option'); ?>" target="_blank">DONATE</a>
+
+                        <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 mt-4 mt-md-0">
                         <?php dynamic_sidebar( 'footer-contact' ); ?>
                     </div>    
                 </div>
