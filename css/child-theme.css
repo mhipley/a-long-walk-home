@@ -15090,7 +15090,10 @@ a {
   color: #fff !important;
 }
 .donate-button:hover {
-  color: #F3F3F3 !important;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white !important;
+  background-color: transparent;
 }
 
 .home #wrapper-navbar {
@@ -15149,6 +15152,10 @@ a {
   padding: 0 !important;
 }
 
+.wp-block-button, .wp-block-button__link {
+  border-width: 1px !important;
+}
+
 .quote-block {
   color: #404040;
   font-family: "abc_arizona_serif";
@@ -15175,6 +15182,13 @@ a {
 .site-footer ul li a {
   text-decoration: none;
   color: white !important;
+}
+
+.footer-donate {
+  background-color: transparent;
+}
+.footer-donate:hover {
+  color: #000 !important;
 }
 
 .entry-content > .row {

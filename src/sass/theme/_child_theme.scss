@@ -43,7 +43,10 @@ a {
 .donate-button {
     color: #fff !important;
     &:hover {
-        color: $offwhite !important;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white !important;
+        background-color: transparent;
     }
 }
 
@@ -126,6 +129,9 @@ a {
     padding: 0 !important;
 }
 
+.wp-block-button, .wp-block-button__link {
+    border-width: 1px !important;
+}
 
 .quote-block {
     color: $midgray;
@@ -158,6 +164,14 @@ a {
             }
         }
     }
+}
+
+.footer-donate {
+    background-color: transparent;
+    &:hover {
+        color: $black !important;
+    }
+
 }
 
 

@@ -18,7 +18,7 @@
         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
             <div class="col-sm-6 col-md-4 pb-4">
             
-                <div class="ratio-image-wrapper ratio ratio-1x1 pb-2">
+                <div class="ratio-image-wrapper ratio ratio-1x1 pb-2 bg-primary">
                 <?php 
 
                 if ( has_post_thumbnail() ): ?>
